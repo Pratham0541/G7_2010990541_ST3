@@ -1,0 +1,77 @@
+<!doctype html>
+<html><head>
+<style>
+
+.p1 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size:20px;
+  }
+.button{background-color:#1a237e; height:45px; width:100px;border-radius:20px; color:white; margin-left:53px;  }
+
+.button:hover {background-color: #0e0d19}
+
+.button:active {
+  background-color: purple;
+  box-shadow: 0 5px purple;
+  transform: translateY(2px);
+  }
+ body{ background-image: url("");
+ background-repeat:no-repeat;
+ }
+form{ background-image:url("./data/Free-Cool-Light-Blue-Background.jpg");
+animation-name: anim;
+animation-duration:4s;
+}
+ @keyframes anim {
+  from { opacity:0.1;}
+  to {opacity:1 } }
+#Formdiv{ background-image: url("../data/online%20gaming/loginbg.jpg");
+}
+#logo{animation-name: anim;
+animation-duration:1s;}
+</style>
+</head>
+<body style="background-color:black;">
+<div><button style="margin-left:80%; border-radius:25px; height:30px;" id="mode">Light Mode</button> </div>
+<div><im id="logo" style="margin-left:41%; margin-top:-1%;" src="./data/online%20gaming/loginbg.jpg"> </div>
+<div id="Formdiv" style="margin-top:-1%; border:1px solid white; opacity:1; height:600px;">
+
+<form class="p1" style="height:350px; width:350px; border-radius:10px; margin-left:43%; opacity:1;">
+<div style="font-size:30px; color:white; margin-top:0px;"><img style="margin-left:-27px; margin-top:-1px ;height:50px; width:300px; border-radius:25px;" src="../data/memberlogin.png"></div>
+<div style="margin-top:25px;">
+<input type="text" style="height:32px;background-color:black ;width:235px; border-radius:23px; font-size:18px; color:white; " placeholder="Username">
+</div><br>
+<div>
+<input type="password" style="height:32px;background-color:black; width:235px; border-radius:23px; font-size:18px;color:white;" placeholder="Password">
+</div><br>
+
+
+<a href="../Project.html"><button type="button" class="button" id="b1" style="margin-left:20%;"><b>Sign In</b></button></a><br>
+<a href="forgot.html" style="margin-left:15%; font-size:10px;color:white; ">Forgot your password ?</a>
+</form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#mode").click(function(){
+//	$("body").css("background-color","white");
+//	$("").css("background-color","white");
+
+//	$("div").css("background-image", "url("data/images/bg-desktop-light.jpg")"));
+        var imageUrl = "../data/Dark%20mountain.jfif";
+        $("body").css("background-image", "url(" + imageUrl + ")");
+        $("input").css("background-color","white");
+		$("button").css("background-color","rgb(55 60 148)");
+		$("button").css("color","white");
+		$("input").css("color","black");
+		$("a").css("color","white");
+		$("p").css("color","white");
+  });
+  $("#b1").click(function(){
+          alert("Log In Successful")
+  });
+
+});
+</script>
+</body>
+</html>
